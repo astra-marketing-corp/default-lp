@@ -94,9 +94,9 @@
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #1f2f31;
   /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #9AACC2;
+  --accent-color: #eda025;
   /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff;
+  --surface-color: #2b286b;
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff;
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -263,6 +263,7 @@ h6 {
 .manrope-400 {
   font-family: var(--manrope);
   font-weight: 400;
+  color:var(--accent-color);
 }
 
 .manrope-500 {
@@ -278,6 +279,7 @@ h6 {
 .manrope-700 {
   font-family: var(--manrope);
   font-weight: 700;
+  color:var(--accent-color);
 }
 
 .manrope-800 {
@@ -910,9 +912,17 @@ section,
     content: "";
     width: 60%;
     background-image: linear-gradient(180deg, color-mix(in srgb, #E2E2E2, transparent 0%), color-mix(in srgb, #E2E2E2, transparent 0%) 100%), linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%);
+    /* background-image: url("../../assets/img/advantages-section/advantages.webp"); */
     top: 0;
     bottom: 0;
     z-index: 2;
+
+    /* background-image: url("../../assets/img/hero-banner/hero-3.webp");
+    
+    background-size: cover;    /* makes it fit */
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9; */
   }
 }
 
@@ -1062,7 +1072,8 @@ section,
     position: absolute;
     content: "";
     width: 30%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, #9AACC2, transparent 0%), color-mix(in srgb, #9AACC2, transparent 0%) 100%), linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%);
+    /* background-image: linear-gradient(180deg, color-mix(in srgb, #9AACC2, transparent 0%), color-mix(in srgb, #9AACC2, transparent 0%) 100%), linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%); */
+    background-color: var(--accent-color);
     color: red;
     top: 0;
     bottom: 0;
@@ -1073,7 +1084,8 @@ section,
 .limited-offer:before {
   position: absolute;
   content: "";
-  background: color-mix(in srgb, #ffffff, transparent 40%);
+  /* background: color-mix(in srgb, #ffffff, transparent 40%); */
+  background-color: var(--surface-color);
   inset: 0;
   z-index: 2;
 }
@@ -1139,16 +1151,22 @@ section,
   filter: brightness(0) saturate(100%) invert(49%) sepia(11%) saturate(580%) hue-rotate(176deg) brightness(91%) contrast(90%);
 }
 
+.why-choose-us .btn-secondary{
+  background-color: var(--accent-color);
+  border : none;
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
 .services .service-item {
   background-color: var(--surface-color);
+  border-color: var(--accent-color);
   box-shadow: 0px 5px 10px 0px rgba(124, 124, 124, 0.1);
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
   border-radius: 18px;
-  border-top: 20px solid #E3E3E3;
+  border-top: 20px solid var(--accent-color);
   height: 100%;
 
   /* Center all children */
@@ -1192,11 +1210,15 @@ section,
   font-size: 14px;
   margin-bottom: 0;
 }
+.services .btn-outline-secondary{
+  color:var(--accent-color);
+}
 
 @media (min-width: 1365px) {
   .services .service-item:hover {
     transform: translateY(-10px);
     border-color: var(--accent-color);
+    
   }
 
   .services .service-item:hover h3 {
@@ -1212,6 +1234,10 @@ section,
   background-position: left center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.advantages .btn-secondary{
+  background-color: var(--accent-color);
+  border : none;
 }
 
 /*--------------------------------------------------------------
@@ -1232,7 +1258,11 @@ section,
   width: 150px;
   height: 150px;
 }
-
+.cta-section .btn-light{
+  background-color: var(--accent-color);
+  color: white;
+  border : none;
+}
 
 /*--------------------------------------------------------------
 # Testimonials Section
@@ -1306,6 +1336,9 @@ section,
 .testimonials .swiper-slide {
   opacity: 0.3;
 }
+.testimonials p{
+  color :white;
+}
 
 @media (max-width: 1199px) {
   .testimonials .swiper-slide-active {
@@ -1326,4 +1359,14 @@ section,
     opacity: 1;
     transform: scale(1.12);
   }
+}
+
+.contact-section{
+  
+    /* background-image: url("../../assets/img/footer.webp"); */
+    
+    background-size: cover;    /* makes it fit */
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
