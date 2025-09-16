@@ -892,15 +892,15 @@ section,
     position: absolute;
     content: "";
     width: 60%;
-    background-image: linear-gradient(180deg, color-mix(in srgb, #E2E2E2, transparent 0%), color-mix(in srgb, #E2E2E2, transparent 0%) 100%), linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%);
-    /* background-image: url("../../assets/img/advantages-section/advantages.webp"); */
+    /* background-image: linear-gradient(180deg, color-mix(in srgb, #E2E2E2, transparent 0%), color-mix(in srgb, #E2E2E2, transparent 0%) 100%), linear-gradient(180deg, rgb(0, 0, 0), rgb(0, 0, 0) 100%); */
+    /* background-image: url("../../assets/img/hero-banner/hero-3.webp"); */
     top: 0;
     bottom: 0;
     z-index: 2;
 
-    /* background-image: url("../../assets/img/hero-banner/hero-3.webp");
+    background-image: url("../../assets/img/hero-banner/hero-3.webp");
     
-    background-size: cover;    /* makes it fit */
+    background-size: cover;    /* makes it fit
     background-position: center;
     background-repeat: no-repeat;
     opacity: 0.9; */
@@ -1094,6 +1094,10 @@ section,
 .limited-offer .percent-off {
   font-size: 64px;
   color: #9AACC2;
+}
+.limited-offer .btn-secondary{
+  background-color: var(--accent-color);
+  border : none;
 }
 
 /* Countdown Timer */
@@ -1299,7 +1303,7 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials .testimonial-item {
-  background-color: var(--surface-color);
+  /* background-color: var(--surface-color); */
   box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
   box-sizing: content-box;
   padding: 30px;
@@ -1368,7 +1372,7 @@ section,
   opacity: 0.3;
 }
 .testimonials p{
-  color :white;
+  /* color :white; */
 }
 
 @media (max-width: 1199px) {
@@ -1392,12 +1396,21 @@ section,
   }
 }
 
-.contact-section{
+/* .contact-section{
   
-    /* background-image: url("../../assets/img/footer.webp"); */
+    background-image: url("../../assets/img/footer.webp");
     
-    background-size: cover;    /* makes it fit */
+    background-size: cover;  
     background-position: center;
     background-repeat: no-repeat;
 
+} */
+.contact-section h4{
+  color: white;
+}
+.contact-section h2{
+  color: white;
+}
+.contact-section p{
+  color: white;
 }
