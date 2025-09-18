@@ -972,7 +972,8 @@ section,
 }
 
 .hero .hero-content {
-  /* margin-bottom: 4rem; */
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
   z-index: 5;
 }
 
