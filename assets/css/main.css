@@ -290,6 +290,52 @@ h6 {
   font-weight: 900;
 }
 
+/* Fonts: Monntserrat */
+.montserrat-100 {
+  font-family: var(--manrope);
+  font-weight: 100;
+}
+
+.montserrat-200 {
+  font-family: var(--manrope);
+  font-weight: 200;
+}
+
+.montserrat-300 {
+  font-family: var(--manrope);
+  font-weight: 300;
+}
+
+.montserrat-400 {
+  font-family: var(--manrope);
+  font-weight: 400;
+}
+
+.montserrat-500 {
+  font-family: var(--manrope);
+  font-weight: 500;
+}
+
+.montserrat-600 {
+  font-family: var(--manrope);
+  font-weight: 600;
+}
+
+.montserrat-700 {
+  font-family: var(--manrope);
+  font-weight: 700;
+}
+
+.montserrat-800 {
+  font-family: var(--manrope);
+  font-weight: 800;
+}
+
+.montserrat-900 {
+  font-family: var(--manrope);
+  font-weight: 900;
+}
+
 /*--------------------------------------------------------------
 # PHP Email Form Messages
 --------------------------------------------------------------*/
@@ -367,10 +413,15 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
-  color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
+  padding: 0 1%;
+}
+
+.header .container-fluid {
+  background: linear-gradient(135deg, #040E18 0%, #093C70 100%);
+  border-radius: 16px;
+  box-shadow: 0 11px 13.3px 0 rgba(0, 0, 0, 0.25);
+  margin-top: 1%;
+  padding: 15px 30px;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -482,7 +533,14 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: #041c36;
+  background: linear-gradient(135deg, #040E18 0%, #093C70 100%);
+}
+
+.scrolled .header .container-fluid {
+  margin-top: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0;
 }
 
 /*--------------------------------------------------------------
@@ -877,173 +935,203 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  width: 100%;
-  min-height: 100vh;
   position: relative;
-  padding: 120px 0 60px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
-@media (min-width: 1200px) {
-  .hero {
-    position: relative;
-    /* make sure parent is positioned */
-  }
-
-  .hero:after {
-    position: absolute;
-    content: "";
-    width: 60%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 2;
-
-    /* Layered backgrounds */
-    background-image:
-      linear-gradient(180deg,
-        rgb(59, 54, 129, 0) 0%,
-        rgba(5, 161, 218, 0.5) 100%),
-      url("/assets/img/camera-inspection/hero-bg.webp");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-}
-
-
-.hero:before {
+.hero .hero-background {
   position: absolute;
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 40%);
-  inset: 0;
+  inset: 10px;
+  /* shorthand for top, right, bottom, left = 10px */
+  border-radius: 16px;
+  background:
+    url("/assets/img/hero-bg.png") no-repeat center center/cover,
+    linear-gradient(135deg, #040E18 0%, #093C70 100%);
+  z-index: 0;
+}
+
+.hero .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%,
+      color-mix(in srgb, var(--accent-color), transparent 90%) 0%,
+      transparent 50%);
   z-index: 2;
 }
 
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero .container,
-.hero .container-fluid {
-  z-index: 3;
+.hero .container {
   position: relative;
+  z-index: 2;
+  color: #fff;
 }
 
-.hero h1 {
-  margin: 0;
-  font-size: 2.2rem;
-  font-weight: 700;
+.hero .hero-content {
+  /* margin-bottom: 4rem; */
+  z-index: 5;
 }
 
-.hero blockquote {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  padding-left: 20px;
-  border-left: 2px solid var(--accent-color);
-  margin: 40px 0;
+.hero .hero-content .badge {
+  padding: 10px 24px;
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.10);
 }
 
-.hero .btn-get-started {
-  color: #18538d;
-  background: #ffffff;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-align: center;
-  padding: 12px 30px;
-  border-radius: 20px;
-  transition: 0.5s;
+.hero .hero-content h4 {
+  letter-spacing: 12.8px;
 }
 
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
-  animation: pulse-once 0.3s ease;
-}
-
-/* Keyframes for pulse effect */
-@keyframes pulse-once {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-
-@media (max-width: 640px) {
-  .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-
-  .hero h4,
-  .hero h1,
-  .hero blockquote {
-    text-align: center;
-  }
-
-  .hero .btn-get-started {
-    width: 100%;
-    margin-bottom: 25px;
-  }
-}
-
-.hero-form {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  position: relative;
-  z-index: 3;
-}
-
-.hero-form h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-}
-
-.hero-form .form-control {
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  padding: 12px;
-  font-size: 14px;
-}
-
-.hero-form .form-control:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.1);
-}
-
-.hero-form button {
-  background: #18538d;
+.hero .hero-content hr {
+  margin: auto;
+  width: 100px !important;
+  background-color: #ffffff;
+  height: 3px;
   border: none;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: 0.3s ease-in-out;
 }
 
-.hero-form button:hover {
-  background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+.hero .hero-content h6 {
+  letter-spacing: 7px;
+}
+
+.hero .hero-content h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -3.6px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .hero .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+.hero .hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .hero .hero-content p {
+    font-size: 1.1rem;
+  }
+}
+
+.hero .hero-content .hero-btns {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 576px) {
+  .hero .hero-content .hero-btns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.hero .hero-content .hero-btns .btn {
+  padding: 15px 35px;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 576px) {
+  .hero .hero-content .hero-btns .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.hero .hero-content .hero-btns .cta-btn {
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 16px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.hero .hero-content .hero-btns .cta-btn:hover {
+  background: #ffffff;
+}
+
+.hero .hero-content .hero-btns .cta-btn .small-text {
+  color: #FFF;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.hero .hero-content .hero-btns .cta-btn .big-text {
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1.6px;
+}
+
+.hero .hero-content .hero-btns .cta-btn:hover .small-text,
+.hero .hero-content .hero-btns .cta-btn:hover .big-text {
+  color: #040E18;
+}
+
+form button.btn {
+  display: flex;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #16495F;
+  gap: 12px;
+  align-self: stretch;
+}
+
+form button.btn:hover {
+  background-color: #134458;
+  color: #11262a;
 }
 
 /*--------------------------------------------------------------
