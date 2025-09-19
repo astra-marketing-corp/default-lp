@@ -143,7 +143,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: "Montserrat";
 }
 
 a {
@@ -1279,19 +1279,79 @@ form button.btn:hover {
 # Why Choose Us Section
 --------------------------------------------------------------*/
 .why-choose-us {
-  padding: 60px 20px !important;
-  background-image: url("/assets/img/camera-inspection/why-choose-us-bg.webp");
+  /* padding: 60px 20px !important;
+  background-image: url("../../assets/img/camera-inspection/why-choose-us-bg.webp");
   background-position: left center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+
+  background-color: #F2F8FF;
 }
 
 .why-choose-us h4 {
-  letter-spacing: 5px;
+  letter-spacing: 13.8px;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 130%;
+  color: #093C70;
+}
+.why-choose-us h1 {
+  letter-spacing: -1.92px;
+  font-size: 48px;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #202124;
+  font-weight: Bold;
 }
 
 .why-choose-us p {
-  font-size: 0.95rem;
+  letter-spacing: 0;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 150%;
+  color: #232F3A;
+}
+.why-choose-us ul {
+  list-style: none;          /* remove default bullets */
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.why-choose-us ul li {
+  position: relative;
+  padding-left: 35px;        /* space for the icon */
+  margin-bottom: 12px;       /* spacing between items */
+  display: flex;             /* keep text aligned */
+  align-items: flex-start;       /* vertically align text with icon */
+  font-weight: 500;
+  color:#232F3A;
+}
+
+.why-choose-us ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* centers icon vertically */
+  width: 20px;
+  height: 20px;
+  background: url('../../assets/img/why-us/icon.svg') no-repeat center;
+  background-size: contain;
+  
+}
+
+.why-choose-us .btn{
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: 0;
+  padding: 16px 40px;
+  background-color: #16495F;
+  font-weight: 600;
 }
 
 .why-choose-us .icon {
@@ -1321,55 +1381,150 @@ form button.btn:hover {
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+.services h4 {
+  letter-spacing: 13.8px;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 130%;
+  color: #093C70;
+}
+
+.services h1 {
+  letter-spacing: -1.92px;
+  font-size: 48px;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #202124;
+  font-weight: Bold;
+}
+
+
+.services h3 {
+  letter-spacing: -1px;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #202124;
+  font-weight: Bold;
+  font-weight: 700;
+}
+
+.services p {
+  letter-spacing: 0;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 150%;
+  color: #232F3A;
+}
+
 .services .service-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 5px 10px 0px rgba(124, 124, 124, 0.1);
-  padding: 60px 30px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 18px;
-  border-top: 20px solid #E3E3E3;
+  box-shadow: 0px 5px 10px rgba(124, 124, 124, 0.1);
+  padding: 20px;
+  border-radius: 12px;
   height: 100%;
-
-  /* Center all children */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between; /* keeps button at bottom */
+}
+
+.services .service-item .service-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px; /* spacing between icon and text */
 }
 
 .services .service-item .icon {
-  margin-top: -20% !important;
-  color: var(--contrast-color);
-  background: #EDF7FC;
-  margin: 0;
-  width: 64px;
-  height: 64px;
-  border-radius: 50px;
+  flex-shrink: 0;
+  /* background: #EDF7FC; */
+  width: 70px;
+  height: 70px;
+  border-radius: 10px; /* rounded square look */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
+  overflow: hidden; /* prevents image overflow */
 }
 
-.services .service-item .icon svg {
-  width: 32px;
-  height: 32px;
+.services .service-item .icon img {
+  max-width: 100%;   /* adjust image size inside box */
+  max-height: 100%;
+  object-fit: contain;
 }
 
 .services .service-item h3 {
-  font-family: var(--archivo);
-  /* font-weight: 700; */
-  margin: 10px 0 15px 0;
-  font-size: 22px;
-  transition: ease-in-out 0.3s;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .services .service-item p {
-  line-height: 24px;
+  margin: 5px 0 0 0;
   font-size: 14px;
-  margin-bottom: 0;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* Second card */
+
+.services .service-item-2 {
+  background-color: #093C70;
+  box-shadow: 0px 5px 10px rgba(124, 124, 124, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps button at bottom */
+}
+
+.services .service-item-2 .service-content-2 {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px; /* spacing between icon and text */
+}
+
+.services .service-item-2 .icon {
+  flex-shrink: 0;
+  /* background: #EDF7FC; */
+  width: 70px;
+  height: 70px;
+  border-radius: 10px; /* rounded square look */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* prevents image overflow */
+}
+
+.services .service-item-2 .icon img {
+  max-width: 100%;   /* adjust image size inside box */
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.services .service-item-2 h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color : #FFFF;
+}
+
+.services .service-item-2 p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #FFFF;
+}
+.services .service-item-2 .btn{
+  background-color: #FFFF;
+  color : #093C70;
+  font-weight: 700;
+}
+
+.services .btn{
+  background-color: #093C70;
+  color : #FFFF;
+  font-weight: 700;
 }
 
 @media (min-width: 1365px) {
@@ -1377,10 +1532,11 @@ form button.btn:hover {
     transform: translateY(-10px);
     border-color: var(--accent-color);
   }
-
-  .services .service-item:hover h3 {
-    color: var(--accent-color);
+   .services .service-item-2:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-color);
   }
+
 }
 
 /*--------------------------------------------------------------
@@ -1442,115 +1598,235 @@ form button.btn:hover {
 } */
 
 
+
+/* 
+---------------------------------------------------------------
+# Gallery
+--------------------------------------------------------------- */
+.gallery {
+  position: relative;
+  /* min-height: 100vh; */
+  display: flex;
+  align-items: flex-start; /* align at the top, not center */
+  overflow: hidden;
+}
+
+
+.gallery .hero-background {
+  position: absolute;
+  inset: 10px;
+  /* shorthand for top, right, bottom, left = 10px */
+  border-radius: 16px;
+  background:
+    url("/assets/img/hero-bg.png") no-repeat center center/cover,
+    linear-gradient(135deg, #040E18 0%, #093C70 100%);
+  z-index: 0;
+}
+
+.gallery .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%,
+      color-mix(in srgb, var(--accent-color), transparent 90%) 0%,
+      transparent 50%);
+  z-index: 2;
+}
+
+.gallery .container {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.gallery .hero-content {
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  z-index: 5;
+}
+
+.gallery .hero-content .badge {
+  padding: 10px 24px;
+  border-radius: 500px;
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.gallery .hero-content h4 {
+  letter-spacing: 12.8px;
+}
+
+.gallery .hero-content hr {
+  margin: auto;
+  width: 100px !important;
+  background-color: #ffffff;
+  height: 3px;
+  border: none;
+}
+
+.gallery .hero-content h6 {
+  letter-spacing: 7px;
+}
+
+.gallery .hero-content h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .gallery .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+.gallery .hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
-.testimonials .testimonial-item {
+.testimonials .testimonials-item {
   background-color: var(--surface-color);
-  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 0 20px rgba(0, 0, 0, 0.1); */
   box-sizing: content-box;
-  padding: 30px;
-  margin: 40px 30px;
-  min-height: 320px;
+  padding: 20px;
+  border-radius: 15px;
+
+  min-height: 200px;   /* adjust to match design */
+  max-height: 300px;   /* prevent oversized cards */
+  overflow: hidden;    /* ensure content stays inside */
+
   display: flex;
   flex-direction: column;
-  text-align: center;
+  /* text-align: justify; */
   transition: 0.3s;
 }
 
-.testimonials .testimonial-item .stars {
-  margin-bottom: 15px;
+
+.testimonials h4 {
+  letter-spacing: 13.8px;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 130%;
+  color: #093C70;
+}
+.testimonials h1 {
+  letter-spacing: -3.5px;
+  font-size: 70px;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #202124;
+  font-weight: Bold;
+}
+.testimonials h3 {
+  letter-spacing: -1.6px;
+  font-size: 18;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #202124;
+  font-weight: Bold;
 }
 
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
-  border: 4px solid var(--background-color);
-  margin: 0 auto;
-}
-
-.testimonials .testimonial-item h3 {
+.testimonials .testimonials-item .text p {
+  display: -webkit-box;
+  -webkit-line-clamp: 7;   /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
+  line-height: 150%;
+  color: #444;
+  font-family: "Montserrat";
 }
 
-.testimonials .testimonial-item h4 {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0;
-}
 
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 0 auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
-  opacity: 1;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-.testimonials .swiper-slide {
-  opacity: 0.3;
-}
-
-@media (max-width: 1199px) {
-  .testimonials .swiper-slide-active {
-    opacity: 1;
-  }
-
-  .testimonials .swiper-pagination {
-    margin-top: 0;
-  }
-
-  .testimonials .testimonial-item {
-    margin: 40px 20px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonials .swiper-slide-next {
-    opacity: 1;
-    transform: scale(1.12);
-  }
-}
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact-section {
   position: relative;
-  background-image: url("/assets/img/footer-bg.webp");
+  background-image: url("../../assets/img/footer/footer-bg.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .contact-section form button.btn {
-  background-color: #18538d !important;
+  background-color: #16495F !important;
   border: 1px solid #18538d !important;
 }
+
+
+
+
+.contact-section h2 {
+  letter-spacing: -2px;
+  font-size: 40x;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #FFFF;
+  font-weight: Bold;
+}
+
+.contact-section h4 {
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-family: "Montserrat";
+  line-height: 100%;
+  color: #FFFF;
+}
+.contact-section p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 200;
+  color: #FFFF;
+}
+
+
+.contact-section .btn-number{
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  line-height: 100%;
+  font-family: "Montserrat";
+}
+.contact-section .btn-text{
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 125%;
+}
+
 
 /*--------------------------------------------------------------
 # Error 404 Section
