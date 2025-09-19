@@ -2013,6 +2013,20 @@ form button.btn:hover {
   font-weight: Bold;
 }
 
+@media screen and (max-width: 767px) {
+  .testimonials h4 {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+  .testimonials h2 {
+    font-size: 28px !important;
+    text-align: center;
+    letter-spacing: -1px;
+  }
+}
+
 .testimonials .card .testimonial-text {
   max-height: 6em;
   overflow: hidden;
@@ -2034,7 +2048,6 @@ form button.btn:hover {
   color: #0c6afa !important;
 }
 
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -2046,56 +2059,154 @@ form button.btn:hover {
   background-size: cover;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  padding: 60px 20px;
 }
 
 .contact-section form button.btn {
   background-color: #16495F !important;
   border: 1px solid #18538d !important;
+  padding: 16px;
+  border-radius: 8px;
 }
 
-
-
-
 .contact-section h2 {
-  letter-spacing: -2px;
-  font-size: 40x;
-  font-family: "Montserrat";
-  line-height: 100%;
-  color: #FFFF;
-  font-weight: Bold;
+  letter-spacing: -1.5px;
+  font-size: 40px;
+  /* fixed typo */
+  font-family: "Montserrat", sans-serif;
+  line-height: 110%;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .contact-section h4 {
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: 20px;
-  font-family: "Montserrat";
-  line-height: 100%;
-  color: #FFFF;
+  font-family: "Montserrat", sans-serif;
+  line-height: 120%;
+  color: #fff;
+  margin-bottom: 15px;
 }
 
 .contact-section p {
-  margin: 5px 0 0 0;
+  margin: 10px 0;
   font-size: 14px;
-  line-height: 1.4;
-  font-weight: 200;
-  color: #FFFF;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #fff;
 }
 
-
 .contact-section .btn-number {
-  font-size: 35px;
+  font-size: 32px;
   font-weight: 600;
-  letter-spacing: -2px;
-  line-height: 100%;
-  font-family: "Montserrat";
+  letter-spacing: -1.5px;
+  line-height: 110%;
+  font-family: "Montserrat", sans-serif;
 }
 
 .contact-section .btn-text {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   line-height: 125%;
+  font-size: 14px;
 }
 
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 50px 15px;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+
+  .contact-section h4 {
+    font-size: 18px;
+  }
+
+  .contact-section .btn-number {
+    font-size: 26px;
+  }
+
+  .contact-section .hero-btns {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px;
+  }
+
+  .contact-section .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-section h2 {
+    font-size: 26px;
+    letter-spacing: -1px;
+  }
+
+  .contact-section h4 {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+  }
+
+  .contact-section p {
+    font-size: 13px;
+  }
+
+  .contact-section .btn-number {
+    font-size: 22px;
+  }
+
+  .contact-section form .form-floating label,
+  .contact-section form input,
+  .contact-section form select {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-section .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-section {
+    padding: 30px 10px;
+  }
+
+  .contact-section h2 {
+    font-size: 22px;
+    line-height: 120%;
+  }
+
+  .contact-section h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .contact-section .btn-number {
+    font-size: 28px;
+  }
+
+  .contact-section .btn-text {
+    font-size: 13px;
+  }
+
+  .contact-section form button.btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Error 404 Section
