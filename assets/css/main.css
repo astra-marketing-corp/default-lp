@@ -1007,10 +1007,50 @@ section,
 
 .section-title h4 {
   letter-spacing: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .section-title p {
   margin-bottom: 0;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    padding-bottom: 40px;
+  }
+
+  .section-title h4 {
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+
+  .section-title h1,
+  .section-title h2 {
+    font-size: 24px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  .section-title h2:before {
+    width: 100px;
+  }
+
+  .section-title h2::after {
+    width: 40px;
+  }
+
+  .section-title p {
+    font-size: 14px;
+    padding: 0 12px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1377,38 +1417,32 @@ form button.btn:hover {
   font-family: "Montserrat";
   line-height: 100%;
   color: #202124;
-  font-weight: Bold;
+  font-weight: bold;
 }
 
 .why-choose-us p {
-  letter-spacing: 0;
   font-size: 20px;
   font-family: "Montserrat";
   line-height: 150%;
   color: #232F3A;
+  margin-bottom: 1.5rem;
 }
 
 .why-choose-us ul {
   list-style: none;
-  /* remove default bullets */
   padding: 0;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   font-family: "Montserrat";
   font-size: 20px;
   line-height: 150%;
-  letter-spacing: 0;
 }
 
 .why-choose-us ul li {
   position: relative;
   padding-left: 35px;
-  /* space for the icon */
   margin-bottom: 12px;
-  /* spacing between items */
   display: flex;
-  /* keep text aligned */
   align-items: flex-start;
-  /* vertically align text with icon */
   font-weight: 500;
   color: #232F3A;
 }
@@ -1419,52 +1453,93 @@ form button.btn:hover {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  /* centers icon vertically */
   width: 20px;
   height: 20px;
   background: url('../../assets/img/why-us/icon.svg') no-repeat center;
   background-size: contain;
-
 }
 
 .why-choose-us .btn {
   font-family: "Montserrat";
-  font-size: 20px;
+  font-size: 18px;
   line-height: 125%;
-  letter-spacing: 0;
-  padding: 16px 40px;
+  padding: 14px 32px;
   background-color: #16495F;
   font-weight: 600;
+  border-radius: 8px;
 }
 
-.why-choose-us .icon {
-  color: var(--contrast-color);
-  background: #9AACC2;
-  margin: 0;
-  width: 64px;
-  height: 64px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  font-size: 28px;
-  transition: ease-in-out 0.3s;
+.why-choose-us .btn i {
+  margin-left: 8px;
 }
 
-.why-choose-us a {
-  background-color: #9aacc2;
-  border: 1px solid #9aacc2;
+/* -----------------------
+   ✅ Responsiveness
+----------------------- */
+
+/* Medium screens (tablets) */
+@media (max-width: 991px) {
+  .why-choose-us h1 {
+    font-size: 36px;
+  }
+
+  .why-choose-us p,
+  .why-choose-us ul {
+    font-size: 18px;
+  }
 }
 
-.why-choose-us .custom-icon img {
-  filter: brightness(0) saturate(100%) invert(49%) sepia(11%) saturate(580%) hue-rotate(176deg) brightness(91%) contrast(90%);
+/* Small screens (mobile) */
+@media (max-width: 767px) {
+  .why-choose-us {
+    text-align: center;
+  }
+
+  .why-choose-us h4 {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+
+  .why-choose-us h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  .why-choose-us p {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+
+  .why-choose-us ul {
+    font-size: 16px;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .why-choose-us ul li {
+    padding-left: 28px;
+    margin-bottom: 8px;
+  }
+
+  .why-choose-us .btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .why-choose-us img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 2rem;
+  }
 }
 
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-
 .services h4 {
   letter-spacing: 13.8px;
   font-size: 20px;
@@ -1498,6 +1573,21 @@ form button.btn:hover {
   font-family: "Montserrat";
   line-height: 150%;
   color: #232F3A;
+}
+
+@media screen and (max-width: 767px) {
+  .services h4 {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+
+  .services h1 {
+    font-size: 28px;
+  }
+
+  .services p {
+    font-size: 18px;
+  }
 }
 
 .services .service-item {
@@ -1652,7 +1742,6 @@ form button.btn:hover {
     transform: translateY(-10px);
     border-color: var(--accent-color);
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -1683,6 +1772,19 @@ form button.btn:hover {
   background-color: #16495F;
   font-weight: 600;
 }
+
+.advantages ul li i.checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  color: #fff;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1731,8 +1833,7 @@ form button.btn:hover {
   }
 } */
 
-/* 
----------------------------------------------------------------
+/* ---------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------- */
 .gallery {
@@ -1740,8 +1841,9 @@ form button.btn:hover {
   display: flex;
   align-items: flex-start;
   overflow: hidden;
+  padding: 60px 0;
+  /* add breathing room */
 }
-
 
 .gallery .hero-background {
   position: absolute;
@@ -1773,62 +1875,105 @@ form button.btn:hover {
 
 .gallery .gallery-content {
   z-index: 5;
+  margin-bottom: 2rem;
 }
 
 .gallery .gallery-content h4 {
   letter-spacing: 12.8px;
+  font-size: 16px;
 }
 
-.gallery .gallery-content hr {
-  margin: auto;
-  width: 100px !important;
-  background-color: #ffffff;
-  height: 3px;
-  border: none;
-}
-
-.gallery .gallery-content h6 {
-  letter-spacing: 7px;
-}
-
+.gallery .gallery-content h2,
 .gallery .gallery-content h1 {
   color: #FFF;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 48px;
-  font-style: normal;
   font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -2px;
+  line-height: 1.2;
   text-transform: uppercase;
-}
-
-@media (max-width: 992px) {
-  .gallery .gallery-content h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery .gallery-content h1 {
-    font-size: 2.5rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .gallery .gallery-content h1 {
-    font-size: 2rem;
-  }
+  font-size: 48px;
+  letter-spacing: -2px;
 }
 
 .gallery .gallery-content p {
   font-size: 1.25rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   line-height: 1.6;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* -------------------------------
+   Responsive Styles
+--------------------------------*/
+@media (max-width: 992px) {
+  .gallery {
+    padding: 50px 0;
+  }
+
+  .gallery .gallery-content h2,
+  .gallery .gallery-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .gallery .gallery-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 40px 0;
+  }
+
+  .gallery .gallery-content h2,
+  .gallery .gallery-content h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+  }
+
+  .gallery .gallery-content h4 {
+    font-size: 14px;
+    letter-spacing: 8px;
+  }
+
+  .gallery .gallery-content p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+
+  .gallery .row.g-4>div {
+    flex: 0 0 100%;
+    /* force images full width */
+    max-width: 100%;
+  }
+
+  .gallery img {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    padding: 15px;
+  }
+
+  .gallery .gallery-content h2,
+  .gallery .gallery-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .gallery .gallery-content h4 {
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+
+  .gallery .gallery-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
 }
 
 /*--------------------------------------------------------------
