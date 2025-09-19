@@ -614,6 +614,56 @@ h6 {
   }
 }
 
+/* Extra small mobile screens */
+@media (max-width: 575px) {
+
+  /* Hide location badge */
+  .header .badge.location {
+    display: none;
+  }
+
+  .header .container-fluid {
+    padding: 12px 18px;
+    border-radius: 0;
+    margin-top: 0;
+  }
+
+  /* Stack and center content */
+  .header .d-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  /* Center logo */
+  .header .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header .logo img {
+    max-height: 50px;
+  }
+
+  /* Center CTA */
+  .header .header-cta-btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .header .header-cta-btn h3 {
+    font-size: 18px;
+  }
+
+  .header .header-cta-btn .badge.promotion {
+    font-size: 11px;
+    padding: 2px 8px;
+  }
+}
+
+
 /* Global Header on Scroll */
 .scrolled .header {
   background: linear-gradient(135deg, #040E18 0%, #093C70 100%);
