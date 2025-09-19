@@ -1073,7 +1073,7 @@ section,
 
 @media screen and (max-width: 767px) {
   .hero {
-    padding: 80px 15px 15px;
+    padding: 20px 15px 15px;
   }
 
   .hero .hero-content h4 {
